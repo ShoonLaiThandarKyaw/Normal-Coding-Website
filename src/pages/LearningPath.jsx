@@ -75,6 +75,8 @@ function LearningPath() {
           Start Your Journey
         </button>
       </section>
+
+      <div>Learning Path Page</div>
     </>
   );
 }
