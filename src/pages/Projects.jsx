@@ -1,10 +1,13 @@
+import { Link } from "react-router";
+
 function Projects() {
   const projects = [
     {
       batch: 1,
       title: "An Online Dating Website",
       team: "Team A",
-      description: "A romantic-themed dating concept website built with HTML and CSS. Features include love tips, profile matching, user profiles and elegant animations.",
+      description:
+        "A romantic-themed dating concept website built with HTML and CSS. Features include love tips, profile matching, user profiles and elegant animations.",
       demo: "https://cupidintheclouds-theeros.netlify.app/",
       code: "https://github.com/Rekk64/Dating_Website",
     },
@@ -12,7 +15,8 @@ function Projects() {
       batch: 1,
       title: "A Cute Dating Website",
       team: "Team B",
-      description: "A dating website built with HTML and CSS to offer a real chance at love.....",
+      description:
+        "A dating website built with HTML and CSS to offer a real chance at love.....",
       demo: "https://cupidbyteamb.netlify.app/",
       code: "https://github.com/Merryposer/Cupid",
     },
@@ -20,15 +24,17 @@ function Projects() {
       batch: 1,
       title: "Venus Drift Dating App",
       team: "Team C",
-      description: "A youthful dating concept website built with HTML and CSS. Features include zodiac insights, music highlights, user profiles, chat options, trending content, and a Venus-inspired design with Dark Mode.",
+      description:
+        "A youthful dating concept website built with HTML and CSS. Features include zodiac insights, music highlights, user profiles, chat options, trending content, and a Venus-inspired design with Dark Mode.",
       demo: "https://venusdrift.netlify.app/",
-      code: "https://venusdrift.netlify.app/", 
+      code: "https://venusdrift.netlify.app/",
     },
     {
       batch: 2,
       title: "Thadingyut Travel Website",
       team: "Team A",
-      description: "A festive Thadingyut travel website built with HTML and CSS. Showcases curated journeys, local culture, and immersive visuals.",
+      description:
+        "A festive Thadingyut travel website built with HTML and CSS. Showcases curated journeys, local culture, and immersive visuals.",
       demo: "https://luminousthadingyut.netlify.app/",
       code: "https://github.com/Unknown-as22/Luminous-Thadingyut-Team-A-",
     },
@@ -36,7 +42,8 @@ function Projects() {
       batch: 2,
       title: "Festival of Light",
       team: "Team B",
-      description:  "A Thadingyut Festival website built with HTML and CSS. It highlights the festival’s history, travel destinations, a seasonal gift shop, and a contact page.",
+      description:
+        "A Thadingyut Festival website built with HTML and CSS. It highlights the festival’s history, travel destinations, a seasonal gift shop, and a contact page.",
       demo: "https://festivaloflight.netlify.app/",
       code: "https://github.com/Scarletty3/The-festival-of-light",
     },
@@ -44,7 +51,8 @@ function Projects() {
       batch: 2,
       title: "Twinkle Pop-up Store",
       team: "Team C",
-      description: "A festive Thadingyut pop-up website built with HTML and CSS. It features decorations, traditional gifts, sparklers, sky lanterns, and a playful Wish Page with easy, secure shopping.",
+      description:
+        "A festive Thadingyut pop-up website built with HTML and CSS. It features decorations, traditional gifts, sparklers, sky lanterns, and a playful Wish Page with easy, secure shopping.",
       demo: "https://twinkle-pop-up.netlify.app/",
       code: "https://github.com/Myuu-Myuu/Twinkle-pop-up-store",
     },
@@ -54,38 +62,38 @@ function Projects() {
     const isOdd = index % 2 !== 0;
 
     return (
-      <div className="relative md:grid md:grid-cols-2 md:gap-x-8 items-center">
+      <div className="relative items-center md:grid md:grid-cols-2 md:gap-x-8">
         {/* Badge */}
-        <div className="absolute top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg z-10 left-6 -translate-x-1/2 md:left-1/2 shadow-lg border-2 border-black">
+        <div className="absolute top-1/2 left-6 z-10 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-gradient-to-br from-blue-500 to-purple-600 text-lg font-bold text-white shadow-lg md:left-1/2">
           {String(index + 1).padStart(2, "0")}
         </div>
 
         {/* Card */}
         <div
-          className={`ml-16 md:ml-0 animate-fadeInUp ${
+          className={`animate-fadeInUp ml-16 md:ml-0 ${
             isOdd ? "md:col-start-2" : "md:text-right"
           }`}
         >
-          <div className="group relative h-72 rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-gray-900">
+          <div className="group relative h-72 overflow-hidden rounded-xl border border-gray-800 bg-gray-900 shadow-lg">
             {/* Background */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white text-4xl font-bold opacity-80">
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-4xl font-bold text-white opacity-80">
               {project.team}
             </div>
 
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-[2px] flex flex-col justify-center items-center p-6 text-center">
-              <span className="absolute top-4 right-4 text-xs font-bold bg-purple-600 text-white px-3 py-1 rounded-full shadow-lg">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 p-6 text-center backdrop-blur-[2px]">
+              <span className="absolute top-4 right-4 rounded-full bg-purple-600 px-3 py-1 text-xs font-bold text-white shadow-lg">
                 Batch {project.batch}
               </span>
 
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="mb-2 text-2xl font-bold text-white">
                 {project.title}
               </h3>
 
-              <p className="text-sm text-gray-400 mb-2">
+              <p className="mb-2 text-sm text-gray-400">
                 <strong>Team:</strong> {project.team}
               </p>
 
-              <p className="text-gray-300 text-sm mb-6 max-w-md">
+              <p className="mb-6 max-w-md text-sm text-gray-300">
                 {project.description || "Description coming soon..."}
               </p>
 
@@ -95,12 +103,12 @@ function Projects() {
                     href={project.code}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white border border-gray-600 hover:bg-white/10 transition-colors"
+                    className="flex items-center gap-2 rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10"
                   >
                     {/* Inline SVG for Code */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-4 h-4"
+                      className="h-4 w-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -121,12 +129,12 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-purple-500/30 transition-all"
+                    className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-sm font-bold transition-all hover:shadow-lg hover:shadow-purple-500/30"
                   >
                     {/* Inline SVG for Link */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-4 h-4"
+                      className="h-4 w-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -152,13 +160,13 @@ function Projects() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-200 mb-6 animate-fadeInDown">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="animate-fadeInDown mb-6 text-4xl font-bold text-gray-200 md:text-5xl">
             Our Projects
           </h1>
           <p
-            className="text-gray-400 text-sm animate-fadeIn"
+            className="animate-fadeIn text-sm text-gray-400"
             style={{ animationDelay: "0.2s" }}
           >
             Explore real-world projects built by our students. Each project
@@ -169,9 +177,11 @@ function Projects() {
       </section>
 
       {/* Timeline */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="relative max-w-5xl mx-auto">
-          { <div className="absolute top-0 bottom-0 w-0.5 bg-gray-800 left-6 md:left-1/2 md:-translate-x-1/2 animate-growLine"></div> }
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-5xl">
+          {
+            <div className="animate-growLine absolute top-0 bottom-0 left-6 w-0.5 bg-gray-800 md:left-1/2 md:-translate-x-1/2"></div>
+          }
 
           <div className="space-y-20 md:space-y-16">
             {projects.map((project, index) => (
@@ -182,22 +192,24 @@ function Projects() {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl text-gray-300 font-bold mb-4">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-4 text-2xl font-bold text-gray-300">
             Ready to Build Your Own Project?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="mx-auto mb-8 max-w-2xl text-gray-300">
             Join our programs and create impressive projects that highlight your
             growth and skills.
           </p>
-          <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-all animate-fadeIn">
-            Get Started
-          </button>
+          <Link to="/courses">
+            <button className="cursor-pointer animate-fadeIn rounded-lg bg-white px-8 py-4 font-semibold text-black transition-all hover:bg-gray-200">
+              Get Started
+            </button>
+          </Link>
         </div>
       </section>
     </>
   );
 }
 
-export default Projects
+export default Projects;

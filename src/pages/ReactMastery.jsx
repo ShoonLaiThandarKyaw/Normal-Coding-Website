@@ -62,9 +62,9 @@ function ReactMastery() {
           <img src={react} alt="react" className="w-15" />
           <div>
             <h2 className="bg-white px-3 lg:text-2xl text-xl font-bold text-gray-900 mb-2">
-             Styling Mastery Program
+             React Mastery Program
             </h2>
-            <button className="text-xs px-2 py-2 bg-[#C084FC] rounded-full">4 weeks</button>
+            <button className="text-xs px-2 py-2 bg-[#C084FC] rounded-full">8 weeks</button>
             <button className="pl-2 text-xs">Beginner - Intermediate</button>
           </div>
         </div>

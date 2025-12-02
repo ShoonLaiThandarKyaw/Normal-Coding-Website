@@ -19,7 +19,7 @@ function Navbar() {
         </button>
 
         <ul
-          className={`fixed top-0 right-0 h-screen w-[80%] bg-black pt-2 text-gray-400 lg:hidden ${isOpen ? "translate-x-0" : "translate-x-[100%]"} transform duration-300 ease-in-out`}
+          className={`fixed z-10 top-0 right-0 h-screen w-[80%] bg-black pt-2 text-gray-400 lg:hidden ${isOpen ? "translate-x-0" : "translate-x-[100%]"} transform duration-300 ease-in-out`}
         >
           <div className="mt-2 mb-6 flex items-center justify-between px-4">
             <h2 className="text-2xl text-gray-200">Category</h2>
